@@ -58,10 +58,10 @@ config.assets.initialize_on_precompile = false
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-  config.action_mailer.default_url_options = { :host => 'doorkeeper-devise.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'tl-client.herokuapp.com' }
 end
 ##TODO !!NEW seed data -- please update the following in the
 ##production.rb  -john
-DOORKEEPER_APP_ID = "840e1e27c7bd2e0a8a50c1760c64416725d8bb0d18db239b829ab915da953012"
-DOORKEEPER_APP_SECRET = "1946b3050903e36419d56a0537b6af7e6d5780ce9f64ea1f022d9cd7cd1e6629"
-DOORKEEPER_APP_URL = "http://tl-client.herokuapp.com/callback"
+DOORKEEPER_APP_ID = "33df2941bd5436eee324d60ca402d47b3a2059413ae047e056c6fe646b29db55"
+DOORKEEPER_APP_SECRET = "195d0567ff672b8c547dedbe4d2e0136db028d4eff1a7d6ed522e87899fef845"
+DOORKEEPER_APP_URL = "http://tl-client.herokuapp.com"

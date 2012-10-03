@@ -4,7 +4,7 @@ module OmniAuth
       option :name, :doorkeeper
 ##TODO this needs to change for development testing
       option :client_options, {
-        :site => "http://tl-auth.herokuapp.com",
+        :site => "http://localhost:3000",
         :authorize_path => "/oauth/authorize"
       }
 

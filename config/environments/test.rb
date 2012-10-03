@@ -33,6 +33,11 @@ DoorkeeperDeviseClient::Application.configure do
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
   # config.active_record.schema_format = :sql
+##TODO !!NEW seed data -- please update the following in the
+##production.rb  -john
+DOORKEEPER_APP_ID = "7e3cb78f3f0349a701ee248d489cccae14a1002559baceab1545204f9ed71a27"
+DOORKEEPER_APP_SECRET = "b1c369cc4e7912b199e1576efb3c06fe93f34c4afbbc184531dc52a0b7af7999"
+DOORKEEPER_APP_URL = "http://tl-auth.herokuapp.com"
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
