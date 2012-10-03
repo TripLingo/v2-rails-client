@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
-
+gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -9,7 +9,6 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'haml-rails'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,6 +39,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'rails-erd'
 end
 
 group :production do

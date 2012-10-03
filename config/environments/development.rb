@@ -27,9 +27,11 @@ DoorkeeperDeviseClient::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+#TODO #DEVISE modifications
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
-
-DOORKEEPER_APP_ID = "375c2e3fdef2acba33ceefaa14be2b251d5174b9defc2a3b8e27fee8103a5aeb"
-DOORKEEPER_APP_SECRET = "6a2fa82ab6f7b565c8f8f57f677e408ebcda208709bde6eae0a784b48b49205c"
-DOORKEEPER_APP_URL = "http://localhost:4000"
+##TODO !!NEW seed data -- please update the following in the
+##development.rb  -john
+DOORKEEPER_APP_ID = "f9bdae4f5925299e041d3d5be4a9deb7e66294472f214190fade3c2ae5b75045"
+DOORKEEPER_APP_SECRET = "4fb3fab41f07065acad7f19e10646a807f8d7f4e0a69f6f3ac000f4c5f9bdf05"
+DOORKEEPER_APP_URL = "http://localhost:4000/callback"

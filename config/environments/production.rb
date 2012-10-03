@@ -16,7 +16,8 @@ DoorkeeperDeviseClient::Application.configure do
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
-
+#TODO #performance tweak for devise 
+config.assets.initialize_on_precompile = false
   # Generate digests for assets URLs
   config.assets.digest = true
 
@@ -38,7 +39,7 @@ DoorkeeperDeviseClient::Application.configure do
 
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
-
+#TODO configure asset controller
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
 
@@ -59,7 +60,8 @@ DoorkeeperDeviseClient::Application.configure do
   config.active_support.deprecation = :notify
   config.action_mailer.default_url_options = { :host => 'doorkeeper-devise.herokuapp.com' }
 end
-
-DOORKEEPER_APP_ID = "1ddde7cfab1b1696104f2fde213ada8b504972de7b2d17eaaa3125cb559f65c9"
-DOORKEEPER_APP_SECRET = "796ce849f90771b5d3f4f2b9f3c2b48b2db3e4052d94d40b5f1d9f86cee63a73"
-DOORKEEPER_APP_URL = "http://doorkeeper-provider.herokuapp.com"
+##TODO !!NEW seed data -- please update the following in the
+##production.rb  -john
+DOORKEEPER_APP_ID = "840e1e27c7bd2e0a8a50c1760c64416725d8bb0d18db239b829ab915da953012"
+DOORKEEPER_APP_SECRET = "1946b3050903e36419d56a0537b6af7e6d5780ce9f64ea1f022d9cd7cd1e6629"
+DOORKEEPER_APP_URL = "http://tl-client.herokuapp.com/callback"

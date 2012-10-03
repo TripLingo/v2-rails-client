@@ -2,9 +2,9 @@ module OmniAuth
   module Strategies
     class Doorkeeper < OmniAuth::Strategies::OAuth2
       option :name, :doorkeeper
-
+##TODO this needs to change for development testing
       option :client_options, {
-        :site => "http://localhost:4000",
+        :site => "http://tl-auth.herokuapp.com",
         :authorize_path => "/oauth/authorize"
       }
 

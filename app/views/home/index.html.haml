@@ -3,7 +3,7 @@
     .span16
       - unless signed_in?
         %h3 Sign in first to explore the provider's API
-        %p= link_to "Sign in with OAuth 2 provider", user_omniauth_authorize_path(:doorkeeper), :class => "btn primary"
+        %p= link_to "Sign in TripLingo API", user_omniauth_authorize_path(:doorkeeper), :class => "btn primary"
       - else
         %h2 Explore the api
         .well
