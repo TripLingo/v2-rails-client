@@ -64,4 +64,4 @@ end
 ##production.rb  -john
 DOORKEEPER_APP_ID = "33df2941bd5436eee324d60ca402d47b3a2059413ae047e056c6fe646b29db55"
 DOORKEEPER_APP_SECRET = "195d0567ff672b8c547dedbe4d2e0136db028d4eff1a7d6ed522e87899fef845"
-DOORKEEPER_APP_URL = "http://tl-client.herokuapp.com"
+DOORKEEPER_APP_URL = "http://tl-auth.herokuapp.com"
