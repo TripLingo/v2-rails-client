@@ -32,15 +32,20 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+
+group :development do
+  gem 'letter_opener'
+  gem 'sqlite3'
+  gem 'rails-erd'
+  gem 'thin'
+  gem 'foreman'
+end
+
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
 
-group :development do
-  gem 'sqlite3'
-  gem 'rails-erd'
-end
 
 group :production do
   gem 'pg'

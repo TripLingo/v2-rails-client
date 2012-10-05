@@ -14,7 +14,7 @@ DoorkeeperDeviseClient::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -24,14 +24,29 @@ DoorkeeperDeviseClient::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
-
+ 
   # Expands the lines which load the assets
   config.assets.debug = true
 #TODO #DEVISE modifications
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-end
+config.action_mailer.delivery_method = :letter_opener
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  ##config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => "gmail.com",
+    :authentication => :login,
+    :user_name => "john@triplingo.com",
+    :password => "jesserocks",
+  }
+  
 ##TODO !!NEW seed data -- please update the following in the
 ##development.rb  -john
 DOORKEEPER_APP_ID = "f9bdae4f5925299e041d3d5be4a9deb7e66294472f214190fade3c2ae5b75045"
 DOORKEEPER_APP_SECRET = "4fb3fab41f07065acad7f19e10646a807f8d7f4e0a69f6f3ac000f4c5f9bdf05"
-DOORKEEPER_APP_URL = "http://localhost:4000/callback"
+DOORKEEPER_APP_URL = "http://localhost:4000"
+end
