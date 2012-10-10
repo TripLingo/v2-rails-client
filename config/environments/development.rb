@@ -43,10 +43,8 @@ config.action_mailer.default_url_options = { :host => 'localhost:3000' }
     :user_name => "john@triplingo.com",
     :password => "jesserocks",
   }
-  
-##TODO !!NEW seed data -- please update the following in the
-##development.rb  -john
-DOORKEEPER_APP_ID = "f9bdae4f5925299e041d3d5be4a9deb7e66294472f214190fade3c2ae5b75045"
-DOORKEEPER_APP_SECRET = "4fb3fab41f07065acad7f19e10646a807f8d7f4e0a69f6f3ac000f4c5f9bdf05"
-DOORKEEPER_APP_URL = "http://localhost:4000"
 end
+
+DOORKEEPER_APP_ID = "ff7615b1c539cbd8d533e247559ea34f675117eedcf1a2288cdba47ff2465313"
+DOORKEEPER_APP_SECRET = "b028aa00f72a1bf152baff3abf3e35e04869c3cad8bb7b5e6dc3fa2b5ef089e3"
+DOORKEEPER_APP_URL = "http://localhost:4000"
