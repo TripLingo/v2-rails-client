@@ -1,3 +1,5 @@
 #dbsetup: bundle exec rake db:setup
+dbconsole: bundle exec rails dbconsole
+console: bundle exec rails console
 web: bundle exec thin start -p $RAILS_PORT -e $RACK_ENV
 log: tail -F log/development.log

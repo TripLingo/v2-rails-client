@@ -16,3 +16,4 @@
 #ignore local environment managed by foreman
 .env
 heroku_config.txt
+Procfile

@@ -39,6 +39,9 @@ group :development do
   gem 'rails-erd'
   gem 'thin'
   gem 'foreman'
+  gem 'wirb', :require => false
+  gem 'g', :require => false
+  gem 'irbtools-more', :require => false
 end
 
 group :test do

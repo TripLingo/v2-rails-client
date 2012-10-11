@@ -48,7 +48,31 @@ here](http://doorkeeper-provider.herokuapp.com/oauth/application/new).
 Now you are ready to start the app
 
     rails s
+    
+    require 'rest-client'
+    require 'json'
+    client_id = DOORKEEPER_APP_ID
+ => "ff7615b1c539cbd8d533e247559ea34f675117eedcf1a2288cdba47ff2465313" 
+ client_secret = DOORKEEPER_APP_SECRET
+ => "b028aa00f72a1bf152baff3abf3e35e04869c3cad8bb7b5e6dc3fa2b5ef089e3" 
+
+ 
+response = RestClient.post 'http://localhost:4000/oauth/token', { grant_type: 'client_credentials', client_id: client_id, client_secret: client_secret}
+ 
+ => "{\"access_token\":\"1bc58874a59b4f61c074f292b6bde501c09281f850dafb48ea20fed1e2bdce5f\",\"expires_in\":300,\"scope\":\"public\",\"token_type\":\"bearer\"}" 
+
+token = JSON.parse(response)["access_token"]
+
+ => "1bc58874a59b4f61c074f292b6bde501c09281f850dafb48ea20fed1e2bdce5f" 
 
 
+
+1.9.3p194 :011 > RestClient.get 'http://localhost:4000/api/v1/profiles.json', { 'Authorization' => "Bearer #{token}" }
+<!-- 
+21:46:47 log.1  | Started GET "/api/v1/profiles.json" for 127.0.0.1 at 2012-10-09 21:46:47 -0400
+21:46:47 log.1  | Processing by Api::V1::ProfilesController#index as JSON
+21:46:47 log.1  |   Doorkeeper::AccessToken Load (0.2ms)  SELECT "oauth_access_tokens".* FROM "oauth_access_tokens" WHERE "oauth_access_tokens"."token" = '1bc58874a59b4f61c074f292b6bde501c09281f850dafb48ea20fed1e2bdce5f' LIMIT 1
+21:46:47 log.1  | Filter chain halted as #<Proc:0x007fa2d9271ec8@/Users/jcowhigjr/.rvm/gems/ruby-1.9.3-p194/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+21:46:47 log.1  | Completed 401 Unauthorized in 1ms (ActiveRecord: 0.2ms) -->
 
 
