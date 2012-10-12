@@ -45,10 +45,24 @@ If you want to test it out you can use our sample provider using
 application and get your appication ID and SECRET [click
 here](http://doorkeeper-provider.herokuapp.com/oauth/application/new).
 
-Now you are ready to start the app
-
-    rails s
-    
+Add the client keys to tl-auth server:
+>> clientapp.redirect_uri="http://localhost:3000/users/auth/doorkeeper/callback"
+=> "http://localhost:3000/users/auth/doorkeeper/callback"
+>> clientapp.uid="ff7615b1c539cbd8d533e247559ea34f675117eedcf1a2288cdba47ff2465313"
+=> "ff7615b1c539cbd8d533e247559ea34f675117eedcf1a2288cdba47ff2465313"
+>> clientapp.secret="b028aa00f72a1bf152baff3abf3e35e04869c3cad8bb7b5e6dc3fa2b5ef089e3"
+=> "b028aa00f72a1bf152baff3abf3e35e04869c3cad8bb7b5e6dc3fa2b5ef089e3"
+>> clientapp = Doorkeeper::Application.new
+ow in set
+>> clientapp.name="localhost3000"=> "localhost3000"
+>> clientapp.save
+   (0.1ms)  begin transaction
+  Doorkeeper::Application Exists (0.2ms)  SELECT 1 AS one FROM "oauth_applications" WHERE ("oauth_applications"."uid" = '31aa0b0f8f37afe3681bd0265a8a37efa27c567e32d00d4436ff03f881dc077d' AND "oauth_applications"."id" != 1) LIMIT 1
+   (0.5ms)  UPDATE "oauth_applications" SET "name" = 'localhost3000', "updated_at" = '2012-10-12 03:48:47.917293' WHERE "oauth_applications"."id" = 1
+   (3.1ms)  commit transaction
+  true 
+   
+Test it on the client using rest commands:   
     require 'rest-client'
     require 'json'
     client_id = DOORKEEPER_APP_ID

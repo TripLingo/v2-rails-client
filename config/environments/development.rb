@@ -45,6 +45,6 @@ config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   }
 end
 
-DOORKEEPER_APP_ID = "ff7615b1c539cbd8d533e247559ea34f675117eedcf1a2288cdba47ff2465313"
-DOORKEEPER_APP_SECRET = "b028aa00f72a1bf152baff3abf3e35e04869c3cad8bb7b5e6dc3fa2b5ef089e3"
+DOORKEEPER_APP_ID = "2613487dc7edf3871c015b9df1f2ded421e277a3631e6d763d90b4b77452793b"
+DOORKEEPER_APP_SECRET = "62cc3d569a6d7225a8dd974871a700b24ee977bffaf16ad4634aba16ec6058f9"
 DOORKEEPER_APP_URL = "http://localhost:4000"
